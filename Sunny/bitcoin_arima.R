@@ -2,6 +2,12 @@ library(tseries)
 library(quantmod)
 library(forecast)
 
+rmse <- function(y_true, y_pred){
+  y_true = as.numeric(y_true)
+  y_pred = as.numeric(y_pred)
+  mse = mean((y_true - y_pred)^2)
+  return(sqrt(mse))
+}
 # Load data
 btc = get.hist.quote(instrument = "BTC-USD", start = "2018-01-01", end = "2023-12-31", 
                      quote = c("Open", "High", "Low", "Close", "Volume"))
@@ -31,5 +37,14 @@ for(i in 1:length(test)){
   hist_data <- c(hist_data,test[i])
 }
 sqrt(mean((arima_pred - test)^2))
-plot(as.numeric(test)[1:10], type = "l")
+
+# Plot of prediction
+plot(as.numeric(test), type = "l", ylab = "Price")
 lines(arima_pred, col = "red")
+
+# Closer look of the plot (performance is actually bad) 
+plot(as.numeric(test)[1:10], type = "l", ylab = "Price")
+lines(arima_pred, col = "red")
+
+rmse(test, c(tail(train,1), test[-length(test)])) # naive prediction
+rmse(test, arima_pred) # arima prediction (very little improvement)
