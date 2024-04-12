@@ -1,0 +1,28 @@
+name,full name,description
+avg-block-size,Average Block Size,The average block size in MB.
+avg-confirmation-time,Average Confirmation Time,
+blocks-size,Blockchain Size,The total size of all block headers and transactions. Not including database indexes.
+cost-per-transaction,Cost per Transaction,A chart showing miners revenue divided by the number of transactions.
+cost-per-transaction-percent,Cost % of Transaction Volume,A chart showing miners revenue as percentage of the transaction volume.
+difficulty,Difficulty,A relative measure of how difficult it is to find a new block. The difficulty is adjusted periodically as a function of how much hashing power has been deployed by the network of miners.
+estimated-transaction-volume,Estimated Transaction Value,The total estimated value of transactions on the Bitcoin blockchain (does not include coins returned to sender as change).
+estimated-transaction-volume-usd,Estimated USD Transaction Value,The Estimated Transaction Value in USD value.
+hash-rate,Hash Rate,The estimated number of tera hashes per second (trillions of hashes per second) the Bitcoin network is performing.
+market-cap,Market Capitalization,"The total USD value of bitcoin supply in circulation, as calculated by the daily average market price across major exchanges."
+market-price,Market Price (USD),Average USD market price across major bitcoin exchanges.
+median-confirmation-time,Median Confirmation Time,The median time for a transaction to be accepted into a mined block and added to the public ledger (note: only includes transactions with miner fees).
+mempool-count,Mempool Transaction Count,The number of transactions waiting to be confirmed.
+mempool-growth,Mempool Size Growth,The rate at which the mempool is growing per second.
+mempool-size,Mempool Size,The aggregate size of transactions waiting to be confirmed.
+miners-revenue,Miners Revenue,Total value of coinbase block rewards and transaction fees paid to miners.
+n-transactions,Confirmed Transactions Per Day,The number of daily confirmed Bitcoin transactions.
+n-transactions-excluding-popular,Number of Transactions Excluding Popular Addresses,"The total number of Bitcoin transactions, excluding those involving any of the network&#39;s 100 most popular addresses."
+n-transactions-per-block,Average Number Of Transactions Per Block,The average number of transactions per block.
+n-transactions-total,Total Number of Transactions,Total Number of transactions
+n-unique-addresses,Number Of Unique Addresses Used,The total number of unique addresses used on the Bitcoin blockchain.
+output-volume,Output Value,The total value of all transaction outputs per day (includes coins returned to the sender as change).
+total-bitcoins,Total Circulating Bitcoin, The total supply of BTC is limited and pre-defined in the Bitcoin protocol at 21 million with the mining reward (how Bitcoins are created) decreasing over time.
+trade-volume,Exchange Trade Volume (USD), The total USD value of trading volume on major bitcoin exchanges.
+transaction-fees,Total Transaction Fees (BTC), The total BTC value of all transaction fees paid to miners which does not include coinbase block rewards
+transaction-fees-usd,Total Transaction Fees (USD), The total USD value of all transaction fees paid to miners which does not include coinbase block rewards.
+transactions-per-second,Transaction Rate Per Second, The number of transactions added to the mempool per second.
