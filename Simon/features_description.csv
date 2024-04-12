@@ -1,0 +1,23 @@
+name,description
+Cost % of Transaction Volume,A chart showing miners revenue as percentage of the transaction volume.
+Hash Rate,The estimated number of tera hashes per second (trillions of hashes per second) the Bitcoin network is performing.
+Number of Transactions Excluding Popular Addresses,"The total number of Bitcoin transactions, excluding those involving any of the network&#39;s 100 most popular addresses."
+Difficulty,A relative measure of how difficult it is to find a new block. The difficulty is adjusted periodically as a function of how much hashing power has been deployed by the network of miners.
+Mempool Size,The aggregate size of transactions waiting to be confirmed.
+Blockchain Size,The total size of all block headers and transactions. Not including database indexes.
+Average Confirmation Time,
+Output Value,The total value of all transaction outputs per day (includes coins returned to the sender as change).
+Average Block Size,The average block size in MB.
+Market Price (USD),Average USD market price across major bitcoin exchanges.
+Market Capitalization,"The total USD value of bitcoin supply in circulation, as calculated by the daily average market price across major exchanges."
+Number Of Unique Addresses Used,The total number of unique addresses used on the Bitcoin blockchain.
+Mempool Transaction Count,The number of transactions waiting to be confirmed.
+Mempool Size Growth,The rate at which the mempool is growing per second.
+Total Number of Transactions,Total Number of transactions
+Miners Revenue,Total value of coinbase block rewards and transaction fees paid to miners.
+Average Number Of Transactions Per Block,The average number of transactions per block.
+Estimated Transaction Value,The total estimated value of transactions on the Bitcoin blockchain (does not include coins returned to sender as change).
+Median Confirmation Time,The median time for a transaction to be accepted into a mined block and added to the public ledger (note: only includes transactions with miner fees).
+Confirmed Transactions Per Day,The number of daily confirmed Bitcoin transactions.
+Estimated USD Transaction Value,The Estimated Transaction Value in USD value.
+Cost per Transaction,A chart showing miners revenue divided by the number of transactions.
