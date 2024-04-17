@@ -19,11 +19,17 @@ plot(btc$Close, type = "l")
 train_last_day = "2022-12-31"
 train = btc[index(btc) <= train_last_day,]
 test = btc[index(btc) > train_last_day,]
+diff_btc = lag(train)-train
+
+
+plot(diff_btc, ylab = "Price", xlab = "Time", main = "1-lagged Bitcoin Price")
+par(mfrow = c(2,1))
+acf(lag(train)-train, main = "ACF plot of 1-lagged Bitcoin Price")
+pacf(lag(train)-train, main = "PACF plot of 1-lagged Bitcoin Price")
 
 # Tune ARIMA order (p,d,q) and train best ARIMA model
-(best_model<-auto.arima(train,max.p=5,max.q=5,max.d=5,seasonal=FALSE,ic='aic',allowdrift=FALSE))
-best_model = arima(train, order = c(2,1,5))
-best_model
+(best_model<-auto.arima(train,max.p=5,max.q=5,max.d=2,seasonal=FALSE,ic='aic',allowdrift=FALSE))
+
 
 # Ljung-Box test - Desired is HO not rejected, i.e. p > 0.05
 orders = arimaorder(best_model)
@@ -43,12 +49,14 @@ for(i in 1:length(test)){
 }
 
 # Plot of prediction
-plot(as.numeric(test), type = "l", ylab = "Price")
+plot(as.numeric(test), type = "l", ylab = "Price", xlab = "Day", main = "Truth vs Prediction")
 lines(arima_pred, col = "red")
+legend("topleft", legend = c("True value", "Predicted value"), col = c("black", "red"), lty = 1)
 
 # Closer look of the plot (performance is actually bad) 
-plot(as.numeric(test)[1:50], type = "l", ylab = "Price")
+plot(as.numeric(test)[1:50], type = "l", ylab = "Price", xlab = "Day", main = "Truth vs Prediction (frist 100 days)")
 lines(arima_pred, col = "red")
+legend("topleft", legend = c("True value", "Predicted value"), col = c("black", "red"), lty = 1)
 
 mse(test, c(tail(train,1), test[-length(test)])) # naive prediction
 mse(test, arima_pred) # arima prediction (very little improvement or even worse)

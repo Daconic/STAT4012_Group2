@@ -1,0 +1,8 @@
+lstm_depth,lstm_size,lstm_dropout,dense_depth,dense_size,dense_dropout,conv_filters,kernel_size,conv_size,model
+1,8,0.2,4,32,0.2,,,,LSTM_5
+1,32,0.2,1,8,0.5,,,,LSTM_30
+4,32,0.5,2,32,0.2,128.0,7.0,,Conv1D_LSTM_30
+1,32,0.5,2,64,0.5,,,,LSTM_90
+3,64,0.2,1,32,0.2,128.0,33.0,3.0,Conv1D_LSTM_90
+4,32,0.5,1,32,0.2,,,,LSTM_180
+3,64,0.2,1,32,0.2,128.0,31.0,4.0,Conv1D_LSTM_180
